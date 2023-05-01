@@ -1,30 +1,17 @@
-<html>
-    <head>
-        <title>Site foda</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Site foda</a></h1>
-            <h2><em>Oque será que esse comando faz?</em></h2>
-        </div>
-        <div><h3>E Esse meu deus do ceu?</h3></div>
+<div>
+  <h1><a href="/">Meu site foda</a></h1>
+</div>
 
-        <div>
-            <p><strong>publicado: 22.04.2023, 17:14</strong></p>
-            <h2><a href="">Meu primeiro post</a></h2>
-            <p>DALE CARAIOOOOOOOOOOO</p>
-        </div>
+{% for post in posts %}
+  <div>
+      <p><em>published: {{ post.published_date }}</em></p>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
 
-        <div>
-            <p><strong>publicado: 22.04.2023, 17:14</strong></p>
-            <h2><a href="">Meu segundo post</a></h2>
-            <p>Me pergunto qual sera a função dessa parte do codigo</p>
-        </div>
-        <div>
-            <p><strong>publicado: 22.04.2023, 17:41</strong></p>
-        <h2><a href="">Outro post</a></h2>
-        <p>lero lero lero quem le aqui é viado</p>
-        
-        </div>
-    </body>
+  <footer>
+    <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+  </footer>
+</body>
 </html>
